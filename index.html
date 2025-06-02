@@ -42,18 +42,28 @@
                 </ul>
             </div>
         </nav>
-        <!-- Chatbot -->
-        <section class="p-4 bg-blue-light" 
+        <!-- Chat Assistant -->
+        <section class="p-4 bg-light border rounded shadow" 
             style="position: fixed; bottom: 20px; right: 20px; width: 400px; z-index: 1000;">
-            <h3 class="text-center text-primary">Gemini</h3>
-            <div id="chat-container" class="border p-3 mb-3 rounded bg-black" 
+            <h3 class="text-center text-primary mb-1">Chat Assistant</h3>
+            <p class="text-center text-muted" style="font-size: 0.9rem;">I'm here if you have any questions!</p>
+            
+            <div id="chat-container" class="border p-3 mb-3 rounded bg-dark text-light" 
                 style="height: 250px; overflow-y: auto;">
                 <div id="chat"></div>
             </div>
+
             <div class="d-flex">
-                <input type="text" id="user-input" class="form-control me-2"="Ask anything" onkeypress="handleEnterKey(event)">
+                <input 
+                    type="text" 
+                    id="user-input" 
+                    class="form-control me-2" 
+                    placeholder="Ask me anything..." 
+                    onkeypress="handleEnterKey(event)"
+                >
                 <button class="btn btn-primary" onclick="sendMessage()">Send</button>
             </div>
+
             <script src="chatbot.js"></script>
         </section>
     
